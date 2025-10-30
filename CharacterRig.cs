@@ -16,7 +16,7 @@ namespace Walkabout.Player
             if (head == null)
                 head = transform.Find("Head");
             if (head == null)
-                Debug.LogError("No head found automatically as child of Agent", this);
+                Debug.LogError("No head found automatically as child of CharacterRig", this);
             if (viewPivot == null)
                 viewPivot = head;
         }
