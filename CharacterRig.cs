@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Walkabout.Player
+namespace ExoLabs.Gameplay.Player
 {
     [DisallowMultipleComponent]
     public class CharacterRig : MonoBehaviour, ICharacterRig
