@@ -10,6 +10,7 @@ namespace ExoLabs.Gameplay.Player
         public Transform Body => transform;
         public Transform Head => head;
         public Transform ViewPivot => viewPivot;
+        public GameObject Owner { get; set; }
 
         void OnValidate()
         {
