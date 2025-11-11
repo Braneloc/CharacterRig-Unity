@@ -5,14 +5,17 @@ namespace ExoLabs.Gameplay.Player
     [DisallowMultipleComponent]
     public class CharacterRig : MonoBehaviour, ICharacterRig
     {
-        [SerializeField] Transform head;
-        [SerializeField] Transform viewPivot;
+        [SerializeField] private Transform head;
+        [SerializeField] private Transform viewPivot;
         public Transform Body => transform;
         public Transform Head => head;
         public Transform ViewPivot => viewPivot;
+
+        // The GameObject that owns this rig (usually the player or agent)
+        // This is to allow seperation of the rig from the controlling entity
         public GameObject Owner { get; set; }
 
-        void OnValidate()
+        private void OnValidate()
         {
             if (head == null)
                 head = transform.Find("Head");

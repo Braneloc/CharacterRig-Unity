@@ -9,3 +9,7 @@ from the body - for  example, to allow the character to look around.
 
 It is also intended as a starting point for building more complex rigs,
 and to be controlled by a separate control system.
+
+The owner property is used to connect the rig to the character controller,
+to allow for seperation of the rig and control logic.  
+(To be handled outside this section)
