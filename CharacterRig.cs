@@ -3,10 +3,10 @@ using UnityEngine;
 namespace ExoLabs.Gameplay.Player
 {
     [DisallowMultipleComponent]
-    public class CharacterRig : MonoBehaviour, ICharacterRig
+    public sealed class CharacterRig : MonoBehaviour, ICharacterRig
     {
-        [SerializeField] private Transform head;
-        [SerializeField] private Transform viewPivot;
+        [SerializeField] Transform head;
+        [SerializeField] Transform viewPivot;
         public Transform Body => transform;
         public Transform Head => head;
         public Transform ViewPivot => viewPivot;
@@ -15,7 +15,7 @@ namespace ExoLabs.Gameplay.Player
         // This is to allow seperation of the rig from the controlling entity
         public GameObject Owner { get; set; }
 
-        private void OnValidate()
+        void OnValidate()
         {
             if (head == null)
                 head = transform.Find("Head");
