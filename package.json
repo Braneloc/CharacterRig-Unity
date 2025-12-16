@@ -1,7 +1,7 @@
 {
-  "version": "0.9.5",
+  "version": "0.9.6",
   "name": "uk.exo-labs.characterrig",
-  "displayName": "CharacterRig",
+  "displayName": "Exo-Labs Character Rig",
   "description": "Simple Character Rig",
   "author": {
     "name": "Braneloc"
